@@ -10,6 +10,23 @@ namespace tpmodul5_103022300101
     {
         static void Main(string[] args)
         {
+            DataGeneric<string> nim= new DataGeneric<string>("103022300101");
+            nim.PrintData();
         }
     }
+    public class DataGeneric<T>
+    {
+        public T Data { get; set; }
+
+        public DataGeneric(T data)
+        {
+            Data = data;
+        }
+
+        public void PrintData()
+        {
+            Console.WriteLine($"Data yang tersimpan adalah: {Data}");
+        }
+    }
+
 }
